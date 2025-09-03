@@ -1,0 +1,51 @@
+<div class="main-container">
+    <div class="left-panel">
+        <p> </p>
+    </div>
+
+    <div class="right-container">
+        <div class="top-panel">
+            <p> </p>
+        </div>
+
+        <div class="actions-row">
+            <div class="buttons">
+                <button class="icon-btn add" (click)="toggleLabel('add')" [class.active]="activeBtn === 'add'">
+                    <i class="fa fa-user-plus"></i>
+                    <span class="label">Agregar Usuario</span>
+                </button>
+
+                <button class="icon-btn delete" (click)="toggleLabel('delete')" [class.active]="activeBtn === 'delete'">
+                    <i class="fa fa-user-minus"></i>
+                    <span class="label">Eliminar Usuario</span>
+                </button>
+
+                <button class="icon-btn update" (click)="toggleLabel('update')" [class.active]="activeBtn === 'update'">
+                    <i class="fa fa-sync"></i>
+                    <span class="label">Actualizar Usuario</span>
+                </button>
+
+                <button class="icon-btn pdf" (click)="toggleLabel('pdf')" [class.active]="activeBtn === 'pdf'">
+                    <i class="fa fa-file-pdf"></i>
+                    <span class="label">Exportar PDF</span>
+                </button>
+
+                <button class="icon-btn excel" (click)="toggleLabel('excel')" [class.active]="activeBtn === 'excel'">
+                    <i class="fa fa-file-excel"></i>
+                    <span class="label">Exportar Excel</span>
+                </button>
+            </div>
+
+
+            <div class="search-box">
+                <span class="lbl-buscar">Buscar:</span>
+                <input type="text" placeholder="Ingrese nombre o código..." class="search-input" />
+            </div>
+        </div>
+
+
+        <div class="bottom-panel">
+            <p> </p>
+        </div>
+    </div>
+</div>
