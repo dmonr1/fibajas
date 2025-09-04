@@ -1,11 +1,9 @@
 <div class="main-container">
     <div class="left-panel">
-        <!-- Avatar -->
         <div class="big-avatar">
             {{ usuario.inicial }}
         </div>
 
-        <!-- Card con datos -->
         <div class="info-card">
             <h3 class="card-title">Datos del Usuario</h3>
             <div class="info">
@@ -16,7 +14,6 @@
             </div>
         </div>
 
-        <!-- Botón -->
         <button class="upload-btn">
             <i class="fas fa-upload"></i>
             Subir Ficha
@@ -26,26 +23,24 @@
     <div class="right-container">
         <div class="top-panel">
             <div class="form-grid">
-                <!-- Fila 1 -->
                 <div class="form-group">
                     <label>Nombres:</label>
-                    <input type="text" class="input-field" placeholder="Ingrese Nombres">
+                    <input type="text" class="input-field" placeholder="Nombres">
                 </div>
 
                 <div class="form-group">
                     <label>Apellido Paterno:</label>
-                    <input type="text" class="input-field" placeholder="Ingrese Apellido Paterno">
+                    <input type="text" class="input-field" placeholder="Apellido Paterno">
                 </div>
 
                 <div class="form-group">
                     <label>Apellido Materno:</label>
-                    <input type="text" class="input-field" placeholder="Ingrese Apellido Materno">
+                    <input type="text" class="input-field" placeholder="Apellido Materno">
                 </div>
 
-                <!-- Fila 2 -->
                 <div class="form-group">
                     <label>DNI:</label>
-                    <input type="text" class="input-field" placeholder="Ingrese DNI">
+                    <input type="text" class="input-field" placeholder="DNI">
                 </div>
 
                 <div class="form-group">
@@ -65,40 +60,30 @@
                         <option value="m2">Motivo 2</option>
                     </select>
                 </div>
+            </div>
 
-                <!-- Fila 3 - Observación -->
-                <div class="form-group full-width">
+            <div class="row-observacion">
+                <div class="observacion-container">
                     <label>Observación:</label>
-                    <textarea class="input-field textarea-field" placeholder="Escriba su observación..."></textarea>
+                    <textarea class="input-field textarea-field" placeholder="Observación..."></textarea>
+                </div>
+
+                <div class="button-group side">
+                    <button class="btn btn-save">
+                        <i class="fa fa-save"></i>
+                        Guardar
+                    </button>
+                    <button class="btn btn-clear">
+                        <i class="fa fa-eraser"></i>
+                        Limpiar
+                    </button>
                 </div>
             </div>
         </div>
 
-       
-
-        <!-- Botones -->
-        <div class="button-group">
-            <button class="btn btn-save">Guardar</button>
-            <button class="btn btn-clear">Limpiar</button>
-        </div>
 
         <div class="actions-row">
             <div class="buttons">
-                <button class="icon-btn add" (click)="toggleLabel('add')" [class.active]="activeBtn === 'add'">
-                    <i class="fa fa-user-plus"></i>
-                    <span class="label">Agregar Usuario</span>
-                </button>
-
-                <button class="icon-btn delete" (click)="toggleLabel('delete')" [class.active]="activeBtn === 'delete'">
-                    <i class="fa fa-user-minus"></i>
-                    <span class="label">Eliminar Usuario</span>
-                </button>
-
-                <button class="icon-btn update" (click)="toggleLabel('update')" [class.active]="activeBtn === 'update'">
-                    <i class="fa fa-sync"></i>
-                    <span class="label">Actualizar Usuario</span>
-                </button>
-
                 <button class="icon-btn pdf" (click)="toggleLabel('pdf')" [class.active]="activeBtn === 'pdf'">
                     <i class="fa fa-file-pdf"></i>
                     <span class="label">Exportar PDF</span>
@@ -119,8 +104,61 @@
 
 
         <div class="bottom-panel">
-            <p> </p>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>DNI</th>
+                        <th>Usuario</th>
+                        <th>Motivo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Juan</td>
+                        <td>Pérez Gómez</td>
+                        <td>12345678</td>
+                        <td>Usuario 1</td>
+                        <td>Motivo 1</td>
+                        <td>
+                            <button class="icon-btn add">
+                                <i class="fa fa-user-plus"></i>
+                            </button>
+                            <button class="icon-btn update">
+                                <i class="fa fa-sync"></i>
+                            </button>
+                            <button class="icon-btn delete">
+                                <i class="fa fa-user-minus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>María</td>
+                        <td>López Díaz</td>
+                        <td>87654321</td>
+                        <td>Usuario 2</td>
+                        <td>Motivo 2</td>
+                        <td>
+                            <button class="icon-btn add">
+                                <i class="fa fa-user-plus"></i>
+                            </button>
+                            <button class="icon-btn update">
+                                <i class="fa fa-sync"></i>
+                            </button>
+                            <button class="icon-btn delete">
+                                <i class="fa fa-user-minus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
 
 

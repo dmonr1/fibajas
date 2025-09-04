@@ -1,7 +1,7 @@
 .main-container {
     display: flex;
     height: 100%;
-    gap: 25px;
+    gap: 20px;
     box-sizing: border-box;
     overflow: hidden;
     padding: 16px;
@@ -11,7 +11,7 @@
     flex: 0 0 25%;
     height: 100%;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     padding: 20px;
 
@@ -21,23 +21,21 @@
     gap: 20px;
 }
 
-/* Avatar grande */
 .big-avatar {
     width: 50%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f97316, #fb923c);
+    background: linear-gradient(135deg, #d1d5db, #e5e7eb);
     color: #fff;
     font-size: 2.8rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+    background: linear-gradient(135deg, #d1d5db, #e5e7eb);
     font-size: 10vh;
 }
 
-/* Card con datos */
 .info-card {
     width: 70%;
     min-height: 30%;
@@ -48,6 +46,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+        overflow: hidden;        
+    word-wrap: break-word;   
+    white-space: normal;   
 }
 
 .card-title {
@@ -70,7 +71,6 @@
     margin: 8px 0;
 }
 
-/* Botón */
 .upload-btn {
     margin-top: auto;
     margin-bottom: 15px;
@@ -84,19 +84,21 @@
     border-radius: 999px;
     cursor: pointer;
 
-    background: linear-gradient(135deg, #f97316, #fb923c);
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     color: #fff;
     font-size: 15px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 
-    box-shadow: 0 -4px 12px rgba(249, 115, 22, 0.35);
+    box-shadow: 0 -4px 12px rgba(179, 179, 179, 0.568);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+         overflow: hidden;        
+    word-wrap: break-word;   
+    white-space: normal;   
 }
 
 .upload-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 -6px 14px rgba(249, 115, 22, 0.45);
 }
 
 .upload-btn i {
@@ -107,14 +109,13 @@
     flex: 0 0 75%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     height: 100%;
     padding-right: 25px;
 }
 
 .top-panel {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
@@ -123,9 +124,7 @@
 .form-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 columnas */
     gap: 16px 24px;
-    /* espacio entre inputs */
 }
 
 .form-group {
@@ -136,7 +135,6 @@
 
 .full-width {
     grid-column: span 3;
-    /* ocupa las 3 columnas */
 }
 
 label {
@@ -148,7 +146,7 @@ label {
 
 .input-field {
     width: 100%;
-    padding: 10px 14px;
+    padding: 7px 14px;
     border: none;
     border-radius: 999px;
     font-size: 14px;
@@ -159,7 +157,7 @@ label {
 
 .textarea-field {
     border-radius: 16px;
-    min-height: 100px;
+    min-height: 80px;
     resize: vertical;
 }
 
@@ -171,70 +169,76 @@ label {
 }
 
 .row-observacion {
+    margin-top: 16px;
     display: flex;
-    gap: 20px; /* espacio entre textarea y botones */
-    align-items: flex-start; /* alinear arriba */
-  }
-  
-  .observacion-container {
-    flex: 1; /* textarea ocupa todo el ancho disponible */
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.observacion-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 6px;
-  }
-  
-  .textarea-field {
+}
+
+.textarea-field {
     border-radius: 16px;
-    min-height: 120px;
+    min-height: 100px;
     resize: vertical;
     width: 100%;
-  }
-  
-  .button-group.side {
+}
+
+.button-group.side {
     display: flex;
-    flex-direction: column; /* botones en columna */
+    flex-direction: column;
     gap: 12px;
-    justify-content: flex-start; /* pegados arriba */
+    justify-content: center;
     align-items: center;
-    min-width: 140px; /* ancho fijo de columna botones */
-  }
-  
+    min-width: 140px;
+    margin-top: 35px;
+}
+
 .btn {
-    padding: 12px 28px;
+    padding: 7px 18px;
     border: none;
     border-radius: 999px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
     color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease;
+    width: 125px;
+}
+
+.btn i {
+    margin-right: 6px;
+    font-size: 14px;
 }
 
 .btn:hover {
     transform: scale(1.05);
 }
 
-/* Botón guardar - celeste */
 .btn-save {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
 }
 
-/* Botón limpiar - verde */
 .btn-clear {
-    background: linear-gradient(135deg, #34d399, #10b981);
+    background: linear-gradient(135deg, #3ed334, #10b916);
 }
 
 .actions-row {
     display: flex;
     align-items: center;
-    gap: 16px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
 .buttons {
-    flex: 0 0 32%;
+    flex: 0 0 18%;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -247,7 +251,7 @@ label {
     height: 40px;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +261,7 @@ label {
     padding: 0;
 
     i {
-        font-size: 13px;
+        font-size: 15px;
         transition: color 0.3s ease;
         flex-shrink: 0;
     }
@@ -377,11 +381,52 @@ label {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Panel inferior */
 .bottom-panel {
     flex: 1;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.custom-table thead {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.custom-table th {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.custom-table td {
+    padding: 8px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.custom-table tbody tr:hover {
+    background: #f9fafb;
+    transition: background 0.2s ease;
+}
+
+.custom-table td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}       
